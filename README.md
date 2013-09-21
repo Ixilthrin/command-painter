@@ -17,6 +17,10 @@ First create an input file.  The language is simple.  Each line represents a key
 
 <b>textbox</b> - The following line is the label.  Any text entered by the user becomes part of the command.
 
+<b>pasteselect</b> - Adds selection to command.  Linux only.
+
+<b>pasteclip</b> - Adds clipboard text to command.
+
 
 <b> Basic Description of Process for Creating a Widget
 
