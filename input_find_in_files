@@ -1,0 +1,19 @@
+title
+Find in Files
+literal
+find -name
+textbox
+File
+literal
+ | xargs grep
+option
+Ignore Case
+-i
+option
+Line Numbers
+-n
+textbox
+Search String
+option
+Auto Run
+\n
