@@ -7,15 +7,15 @@ You are creating a simple GUI that will generate a command.
 
 First create an input file.  The language is simple.  Each line represents a keyword or text.  The keywords are:
 
-title - The following line becomes the title of the GUI dialog.
+<b>title</b> - The following line becomes the title of the GUI dialog.
 
-literal  - whatever is on the next line becomes part of the command as is.
+<b>literal</b>  - Whatever is on the next line becomes part of the command as is.
 
-option - The following line is the name of the option, the following line after that becomes part of the command when selected.
+<b>option</b> - The following line is the name of the option, the following line after that becomes part of the command when selected.
 
-choice - The following line is the name of the group, after that is the name of the choice, after that is the text for the command.
+<b>choice</b> - The following line is the name of the group, after that is the name of the choice, after that is the text for the command.  The text is added when the option is selected.  Choice entries with the same group name will become a radio button group in the dialog.
 
-textbox - The following line is the label.  Any text entered by the user becomes part of the command.
+<b>textbox</b> - The following line is the label.  Any text entered by the user becomes part of the command.
 
 
 <b> Basic Description of Process for Creating a Widget
