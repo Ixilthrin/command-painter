@@ -1,35 +1,6 @@
 #!/usr/local/bin/python
 import sys
 
-# Sample Input Files
-
-#title+Scons
-#literal+scons
-#option+Warn statics+--warn-static-variable
-#option+Build dsos+@dsos
-#option+Build libs+@libs
-#option+Run all+@run_all
-#choice+Type+Debug+--type=debug
-#choice+Type+Opt+--type=opt
-#choice+Compiler+default+--compiler=icc11.1_64
-#choice+Compiler+gcc+gccWS5_64
-#choice+Compiler+icc12+icc12.0_64
-#literal+rig
-
-#title+Search and Replace
-#literal+cat
-#space
-#textbox+Filename
-#literal+| perl -e \'while (<>) { $_ =~ s/
-#textbox+Search string
-#literal+/
-#textbox+Replace string
-#literal+/g; print \"$_\"; }\' > temp.txt && cp temp.txt
-#space
-#textbox+Output Filename
-
-title = "Title"
-
 class TextProvider:
     def __init__(self, guiNumber):
         self.guiNumber = guiNumber
@@ -62,6 +33,7 @@ class Literal(TextProvider):
     def getType(self):
         return "Literal"
 
+# Supports deprecated keyword 'space'
 class Space(TextProvider):
     def __init__(self, lines, guiNumber):
         TextProvider.__init__(self, guiNumber)
@@ -77,6 +49,7 @@ class Space(TextProvider):
     def getText(self):
         return self.text
 
+# Support deprecated keyword 'quote'
 class Quote(TextProvider):
     def __init__(self, lines, guiNumber):
         TextProvider.__init__(self, guiNumber)
@@ -116,6 +89,7 @@ class Option(TextProvider):
     def getType(self):
         return "Option"
 
+# Choices with the same name are grouped together a radio groups in the GUI dialog
 class Choice(TextProvider):
     def __init__(self, lines, guiNumber):
         TextProvider.__init__(self, guiNumber)
@@ -209,7 +183,6 @@ def addEscapeCharacters(text):
         filtered = filtered + char
     return filtered
 
-    
 def main():
     global title
    
