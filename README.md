@@ -18,6 +18,8 @@ choice - The following line is the name of the group, after that is the name of 
 textbox - The following line is the label.  Any text entered by the user becomes part of the command.
 
 
+Basic Description of Process for Creating a Widget
+
 The input file is piped to the generator, and the output is a GUI dialog written in Python.
 
 Redirect the output to a file, and execute the file using Python.
@@ -30,22 +32,39 @@ Just paste into a terminal and you have painted your command.
 Here is an example of an input file for generating a find command piped to grep:
 
 title
+
 Find in Files
+
 literal
-find -name 
+
+find -name
+
 textbox
+
 File
-| xargs grep  
+
+| xargs grep
+
 option
+
 Ignore Case
+
 -i
+
 option
+
 Line Numbers
+
 -n
+
 textbox
+
 Search String
+
 option
+
 Auto Run
+
 \n
 
 
