@@ -1,7 +1,7 @@
 command-painter
 ===============
 
-Qt GUI Generator for Command Painting
+<b> Qt GUI Generator for Command Painting
 
 You are creating a simple GUI that will generate a command.
 
@@ -18,7 +18,7 @@ choice - The following line is the name of the group, after that is the name of 
 textbox - The following line is the label.  Any text entered by the user becomes part of the command.
 
 
-Basic Description of Process for Creating a Widget
+<b> Basic Description of Process for Creating a Widget
 
 The input file is piped to the generator, and the output is a GUI dialog written in Python.
 
@@ -29,49 +29,13 @@ Any change in the dialog or any click on the dialog automatically copies the com
 Just paste into a terminal and you have painted your command.
 
 
-Here is an example of an input file for generating a find command piped to grep:
-
-title
-
-Find in Files
-
-literal
-
-find -name
-
-textbox
-
-File
-
-| xargs grep
-
-option
-
-Ignore Case
-
--i
-
-option
-
-Line Numbers
-
--n
-
-textbox
-
-Search String
-
-option
-
-Auto Run
-
-\n
+The sample file input_find_in_files is provided that generates a find | grep command.
 
 
-Run this to generate the GUI:
+<b> Run this to generate the GUI:
 
-cat input_file_name | python gen_widget.py > widget.py
+cat input_find_in_files | python gen_widget.py > widget.py
 
-Run the widget:
+<b>Run the widget:
 
 python widget.py
